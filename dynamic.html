@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- animate.css -->
+	<link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+	<!-- hover.css -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css
+" media="screen, projection, tty, print" />
+	<!-- custom css -->
+	<link rel="stylesheet" type="text/css" href="css/dynamic.css"/>
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- 	d3  -->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="d3.layout.cloud.js"></script>
+	<!-- jGallery -->
+	<link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/jgallery.min.css?v=1.5.5" />
+	<script type="text/javascript" src="jgallery.min.js?v=1.5.5"></script>
+	<!-- lightGallery -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.19/css/lightgallery.min.css" media="all"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.19/js/lightgallery.min.js"></script>
+	 <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.19/js/lg-thumbnail.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.19/js/lg-fullscreen.min.js"></script>
+	<!--[if lt IE 9]>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	  <![endif]-->
+	<!-- magic animation -->
+	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magic/1.1.0/magic.min.css"/>
+
+</head>
+<body>
+<div class="container">
+	<hr>
+	<div class="row">
+		<a class="btn btn-info" href="#" data-toggle="modal" data-target="#showModal" >Show Modal</a>
+	</div>
+	<hr>
+	<div class="row">
+		<a class="btn btn-info" href="#" data-toggle="modal" data-target="#showModal2" >Show Modal2</a>
+	</div>
+	<hr>
+	<div class="row">
+		<a href="" class="btn btn-info" href="#" role="button" data-toggle="modal" data-target="#wordCloud">Word Cloud</a>
+	</div>
+	<hr>
+	<div class="row">
+		<a class="btn btn-info" href="#" role="button" id="jGalleryBt">Gallery</a>
+		<div id="showGallery">
+			
+				<div id="gallery">
+			    <a href="images/large/1.jpg"><img src="images/large/1.jpg" alt="Photo 1" /></a>
+			    <a href="images/large/2.jpg"><img src="images/large/2.jpg" alt="Photo 2" /></a>
+			    <a href="images/large/3.jpg"><img src="images/large/3.jpg" alt="Photo 3" /></a>
+				</div>
+		</div>
+				<!-- <script type="text/javascript">
+				$( function() {
+				    $( '#gallery' ).jGallery( { mode: 'slider' } );
+				} );
+				</script> -->
+				<script type="text/javascript">
+				$( function() {
+				    $( '#gallery' ).jGallery();
+				} );
+				</script>
+	</div>
+	<hr>
+	<div class="row">
+		<a class="btn btn-info" href="#" role="button" data-toggle="modal" data-target="#gallery2" >Gallery2</a>
+		
+	</div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="showModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <h4 class="modal-title">Title</h4>
+              </div>
+          <div class="modal-body">
+            	<div id="mybox">
+					<!-- <div class="movingitems">aaaa</div> -->
+            	</div>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="showModal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <h4 class="modal-title">Title</h4>
+              </div>
+          <div class="modal-body">
+            	<div id="mybox2">
+					<div class="movingitems">aaaaa</div>
+					<div class="movingitems">bbbbb</div>
+					<div class="movingitems">ccccc</div>
+					<div class="movingitems">ddddd</div>
+					<div class="movingitems">eeeee</div>
+					<div class="movingitems">ffffff</div>
+            	</div>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="wordCloud">
+        <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <h4 class="modal-title">Title</h4>
+              </div>
+          <div class="modal-body">
+            	<div id="myCloud">
+					
+            	</div>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="gallery2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <h4 class="modal-title">Title</h4>
+              </div>
+          <div class="modal-body">
+            	<div id="showGallery2">
+					<div id="lightgallery">
+			 			<a href="images/large/1.jpg">
+			      				<img src="images/large/1.jpg" />
+						  </a>
+						  <a href="images/large/2.jpg">
+						      <img src="images/large/2.jpg" />
+						  </a>
+						  <a href="images/large/3.jpg">
+						      <img src="images/large/3.jpg" />
+						  </a>
+					</div>
+				</div>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+</div>
+<script type="text/javascript">
+	    $(document).ready(function() {
+	        $("#lightgallery").lightGallery({
+	        	thumbnail:true
+	        }); 
+	    });
+</script>
+<script src="dynamic.js"></script>
+</body>
+
+</html>

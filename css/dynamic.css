@@ -1,0 +1,26 @@
+#mybox,#myCloud,#mybox2{
+	height: 400px;
+	background: #eee;
+}
+
+.movingitems{
+	font-size:4em;
+	padding:10px;
+	/*border: 1px solid #000;*/
+	width: 33.3%;
+	height: 40%;
+	float: left;
+}
+
+text{
+	cursor: pointer;
+}
+
+#showGallery{
+	display: none;
+}
+
+#lightgallery img{
+	width: 100px;
+	height: 100px;
+}
